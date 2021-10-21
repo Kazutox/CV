@@ -8,3 +8,5 @@ As such this small application is using Vitepress to statically generate the sit
 ## Why Vitepress
 A CV is a document that does not change that often, but is always a pain to share around - using vitepress allows me to focus on the end-goal while enjoying lightning fast load times and ulta-small file sizes!
 
+## Why a web-based CV
+There is usually some requirement for multiple versions of your CV for multiple purposes, commonly a PDF, TXT and Doc file is required - having the page on the web like this removes that need entirely as this page itself is text, and can be "printed" to any document format using ctrl+p
