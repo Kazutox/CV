@@ -1,4 +1,5 @@
 # CV Project
+### Live link: [cv.jcloete.dev](https://cv.jcloete.dev/)
 
 ## About
 This simple project aims to allow for a live CV to be hosted on my personal site, changing the content shouldn't involve worrying about layouts or styling etc.

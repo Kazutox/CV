@@ -1,7 +1,13 @@
 <template>
   <!-- This data doesnt change often, use the better flexibility of a vue component to render the first part -->
   <div style="padding: 30px;" class="container">
-    <img alt="Photo of Jc Cloete" class="image" src="/resources/jcloete.jpg" />
+    <img
+      width="205px"
+      height="auto"
+      alt="Photo of Jc Cloete"
+      class="image"
+      src="/resources/jcloete.jpg"
+    />
     <div class="header">
       <h1>Jc Cloete - CV</h1>
       <h5>Updated 19 October 2021</h5>
@@ -15,7 +21,11 @@
       <span>Phone Number:</span>
       <a href="tel:+27834564309" target="_blank">(+27) 083 456 4309</a>
       <span>Linkedin:</span>
-      <a href="https://www.linkedin.com/in/jc-cloete-263527128/" target="_blank">in/jc-cloete</a>
+      <a
+        href="https://www.linkedin.com/in/jc-cloete-263527128/"
+        rel="noreferrer"
+        target="_blank"
+      >in/jc-cloete</a>
     </div>
     <!-- Place markdown content here -->
     <Content class="content" />
