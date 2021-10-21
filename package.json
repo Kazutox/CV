@@ -1,0 +1,17 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "Project for my personal CV Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "serve": "vitepress serve",
+    "deploy": "firebase deploy --only hosting:cv-jcloete-dev"
+  },
+  "author": "Jc Cloete",
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "^0.20.0"
+  }
+}

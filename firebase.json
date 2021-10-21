@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": ".vitepress/dist",
+    "site": "cv-jcloete-dev",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
