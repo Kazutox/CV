@@ -1,7 +1,7 @@
 <template>
   <!-- This data doesnt change often, use the better flexibility of a vue component to render the first part -->
   <div style="padding: 30px;" class="container">
-    <img class="image" src="/resources/banner2.jpg" />
+    <img alt="Photo of Jc Cloete" class="image" src="/resources/jcloete.jpg" />
     <div class="header">
       <h1>Jc Cloete - CV</h1>
       <h5>Updated 19 October 2021</h5>
