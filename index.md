@@ -49,6 +49,13 @@ I have successfully contributed to a variety of projects using my knowledge and 
 
 ## EDUCATION  
 
+### Udemy
+#### Vue - The Complete Guide
+###### • 2021 • [Certificate of Completion](/courses/vue1)
+
+#### Nuxt.js - Vue.js on Steroids 
+###### • 2021 • [Certificate of Completion](/courses/nuxt1)
+
 ### Richfield Institute of Technology
 #### Bachelor of Science in Information Technology
 ###### • In Progress • Major in Software Development  

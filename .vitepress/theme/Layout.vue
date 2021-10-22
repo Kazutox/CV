@@ -97,6 +97,7 @@
     "content content" 1fr
     / calc(50vw - 265px) 205px;
 
+  row-gap: 10px;
   justify-content: center;
 }
 
