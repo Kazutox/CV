@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": ".vitepress/dist",
+    "public": "dist",
     "site": "cv-jcloete-dev",
     "ignore": [
       "firebase.json",
