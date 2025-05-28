@@ -8,8 +8,14 @@
             "location": "Pretoria, South Africa",
             "email": "jcccloete97@gmail.com",
             "phone": "+27 834 567 4309",
-            "linkedin": "linkedin.com/in/jc-cloete",
-            "website": "cv.jcloete.dev"
+            "linkedin": {
+                "display": "linkedin.com/in/jc-cloete",
+                "url": "www.linkedin.com/in/jc-cloete-263527128"
+            },
+            "website": {
+                "display": "cv.jcloete.dev",
+                "url": "cv.jcloete.dev"
+            }
         }
     },
     "keyAchievements": {

@@ -9,8 +9,14 @@ const props = defineProps<{
             location: string;
             email: string;
             phone: string;
-            linkedin: string;
-            website: string;
+            linkedin: {
+                display: string;
+                url: string;
+            };
+            website: {
+                display: string;
+                url: string;
+            };
         };
     };
 }>();
@@ -37,11 +43,11 @@ const props = defineProps<{
             </div>
             <div class="contact-item">
                 <span>🔗</span>
-                <a :href="'https://' + props.data.contact.linkedin" target="_blank" rel="noopener noreferrer" class="contact-link">{{ props.data.contact.linkedin }}</a>
+                <a :href="'https://' + props.data.contact.linkedin.url" target="_blank" rel="noopener noreferrer" class="contact-link">{{ props.data.contact.linkedin.display }}</a>
             </div>
             <div class="contact-item">
                 <span>🌐</span>
-                <a :href="'https://' + props.data.contact.website" target="_blank" rel="noopener noreferrer" class="contact-link">{{ props.data.contact.website }}</a>
+                <a :href="'https://' + props.data.contact.website.url" target="_blank" rel="noopener noreferrer" class="contact-link">{{ props.data.contact.website.display }}</a>
             </div>
         </div>
     </div>
