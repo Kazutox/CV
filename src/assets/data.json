@@ -2,7 +2,7 @@
     "introduction": {
         "name": "JC Cloete",
         "title": "Full-Stack Software Developer",
-        "lastUpdated": "May 2025",
+        "lastUpdated": "April 2026",
         "profileImage": "/jcloete.jpg",
         "contact": {
             "location": "Pretoria, South Africa",
@@ -23,7 +23,7 @@
         "items": [
             {
                 "category": "Technical Leadership",
-                "description": "Currently mentoring junior developers and leading live production systems for enterprise clients. Made critical architecture decisions including selection of Gazebo simulation platform over alternatives, resulting in superior system performance."
+                "description": "Mentored junior developers and led live production systems for enterprise clients. Made critical architecture decisions including selection of Gazebo simulation platform over alternatives, resulting in superior system performance."
             },
             {
                 "category": "Business Impact",
@@ -37,19 +37,40 @@
     },
     "professionalSummary": {
         "title": "Professional Summary",
-        "content": "Senior full-stack software developer with <strong>8 years of experience</strong> leading technical projects and delivering enterprise solutions across digital security, fintech, and document verification sectors. Proven expertise in technical leadership, stakeholder management, and architecting scalable systems. Track record of making critical technology decisions, mentoring development teams, and delivering measurable business impact including significant cost optimizations and company-wide system deployments. Strong advocate for modern development practices and emerging technologies."
+            "content": "Senior full-stack software developer with <strong>8+ years of experience</strong> leading technical projects and delivering enterprise solutions across digital security, fintech, and document verification sectors. Proven expertise in technical leadership, stakeholder management, and architecting scalable systems. Track record of making critical technology decisions, mentoring development teams, and delivering measurable business impact including significant cost optimizations and company-wide system deployments. Strong advocate for modern development practices and emerging technologies."
     },
     "experience": [
         {
+            "company": "Drakkentech",
+            "title": "Senior Full-Stack Software Developer",
+            "duration": "Jul 2025 - Mar 2026",
+            "isCurrent": false,
+            "description": "Drove architecture and engineering best practices across the team, aligning frontend and backend systems to more modern, maintainable standards. Performed security and performance audits, improved development workflows, and helped bring legacy codebases in line with stronger engineering practices.",
+            "highlights": [
+                {
+                    "title": "Ithemba Tenant System",
+                    "description": "Contributed across the Ithemba Tenant System ecosystem, including the app, admin portal, security server, app server, supporting microservices, and tenant application portal, with a strong focus on architectural consistency and engineering quality."
+                },
+                {
+                    "title": "Technical Contribution",
+                    "description": "Led the move of the Ithemba tenant app to Expo with cloud-based build and deployment pipelines using React, React Native, Expo, and Python/Flask, significantly improving developer velocity while reducing technical debt."
+                },
+                {
+                    "title": "Leadership / Collaboration",
+                    "description": "Drove technical best practices across the team through architecture guidance, support for junior developers, and adoption of modern LLM tooling for automated code reviews and day-to-day programming workflows."
+                }
+            ]
+        },
+        {
             "company": "TrueVolve Technologies",
             "title": "Senior Full-Stack Software Developer & Technical Lead",
-            "duration": "Jan 2022 - Present",
-            "isCurrent": true,
-            "description": "Leading technical development and client relationships for digital signature and document verification solutions. Currently mentoring junior developers and serving as technical lead on live production systems serving enterprise clients.",
+            "duration": "Jan 2022 - Jun 2025",
+            "isCurrent": false,
+            "description": "Led technical development and client relationships for digital signature and document verification solutions. Mentored junior developers and served as technical lead on live production systems for enterprise clients.",
             "highlights": [
                 {
                     "title": "CBRTA Project Leadership",
-                    "description": "Leading end-to-end delivery of Cross-Border Road Transport Agency integration, including direct client stakeholder management, technical requirements gathering, and production deployment. System is currently live enabling secure digital signing for cross-border transportation permits using C#."
+                    "description": "Led end-to-end delivery of the Cross-Border Road Transport Agency integration, including direct client stakeholder management, technical requirements gathering, and production deployment. The system is live and enables secure digital signing for cross-border transportation permits using C#."
                 },
                 {
                     "title": "Technical Architecture Decisions",
@@ -65,7 +86,7 @@
                 },
                 {
                     "title": "Modern Development Advocacy",
-                    "description": "Championing adoption of AI-powered development tools including LLM-driven programming assistants to enhance team productivity and code quality across the organization."
+                    "description": "Championed adoption of AI-powered development tools, including LLM-driven programming assistants, to enhance team productivity and code quality across the organization."
                 }
             ]
         },
