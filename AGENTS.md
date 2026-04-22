@@ -23,7 +23,7 @@ This is a Vue 3 + TypeScript CV/Resume application built with Vite. The project 
 
 - **Vue 3** with Composition API (`<script setup>`)
 - **TypeScript** for type safety
-- **Tailwind CSS** for styling
+- **CSS design tokens** for custom responsive styling
 - **Vite** as the build tool
 - **Bun** as the package manager
 

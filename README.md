@@ -8,12 +8,12 @@ This is my personal CV/Resume built as a modern web application using Vue 3, Vit
 - **Vue 3** - Component-based UI framework
 - **Vite** - Lightning-fast build tool
 - **TypeScript** - Type-safe development
-- **Tailwind CSS** - Utility-first CSS framework
+- **CSS design tokens** - Custom responsive styling with semantic variables
 - **Bun** - Fast JavaScript runtime and package manager
 - **Firebase Hosting** - Deployment and hosting
 
 ## Features
-- 🎨 Modern, professional design with gradient backgrounds
+- 🎨 Premium portfolio design with a responsive image-led hero
 - 📱 Fully responsive layout for all devices
 - 🖨️ Print-optimized styles for PDF generation
 - ⚡ Lightning-fast performance with Vite
@@ -49,7 +49,7 @@ bun preview
 ```
 src/
 ├── assets/          # Styles, images, and data
-│   ├── base.css    # Global styles and print styles
+│   ├── base.css    # Design tokens, layout styles, responsive and print styles
 │   ├── data.json   # CV content data
 │   └── jcloete.jpg # Profile image
 ├── components/      # Vue components
