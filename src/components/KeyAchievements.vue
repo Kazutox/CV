@@ -23,7 +23,7 @@ const iconMap = {
 
 <template>
   <section id="achievements" class="section-shell achievements-section reveal-section">
-    <SectionTitle :title="data.title" action-label="View all" action-href="#experience" />
+    <SectionTitle :title="data.title" action-label="Experience" action-href="#experience" />
 
     <div class="achievement-grid">
       <article
