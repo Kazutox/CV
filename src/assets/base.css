@@ -99,6 +99,10 @@ svg {
   overflow: hidden;
 }
 
+.print-resume {
+  display: none;
+}
+
 .site-header {
   position: absolute;
   inset: 0 0 auto;
@@ -819,8 +823,7 @@ svg {
 
 .experience-section__layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 280px;
-  gap: 36px;
+  grid-template-columns: 1fr;
 }
 
 .experience-timeline {
@@ -985,74 +988,6 @@ svg {
   border-radius: var(--radius-sm);
 }
 
-.experience-aside {
-  display: grid;
-  gap: 18px;
-  align-self: start;
-}
-
-.experience-aside__chart,
-.experience-aside__info {
-  padding: 24px;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-}
-
-.experience-aside__chart strong {
-  display: block;
-  color: var(--color-accent-primary);
-  font-size: 42px;
-  font-weight: 500;
-  line-height: 1;
-}
-
-.experience-aside__chart > span {
-  display: block;
-  margin-top: 8px;
-  color: var(--color-text-primary);
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.experience-aside__chart svg {
-  width: 100%;
-  height: auto;
-  margin: 24px 0 10px;
-  color: var(--color-accent-primary);
-}
-
-.experience-aside__chart div {
-  display: flex;
-  justify-content: space-between;
-  color: var(--color-text-muted);
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.experience-aside__info {
-  display: flex;
-  gap: 14px;
-  color: var(--color-accent-primary);
-}
-
-.experience-aside__info span,
-.experience-aside__info p {
-  display: block;
-  margin: 0;
-  color: var(--color-text-muted);
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.experience-aside__info strong {
-  display: block;
-  margin: 6px 0 4px;
-  color: var(--color-text-primary);
-  font-size: 15px;
-}
-
 .skill-list {
   display: grid;
   gap: 12px;
@@ -1196,13 +1131,6 @@ svg {
     display: none;
   }
 
-  .experience-section__layout {
-    grid-template-columns: 1fr;
-  }
-
-  .experience-aside {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 @media (min-width: 861px) and (max-width: 1200px) {
@@ -1397,10 +1325,6 @@ svg {
     top: 30px;
   }
 
-  .experience-aside {
-    display: none;
-  }
-
   .skill-group summary {
     grid-template-columns: 42px minmax(0, 1fr) auto 24px;
     gap: 12px;
@@ -1570,71 +1494,296 @@ svg {
 }
 
 @media print {
+  @page {
+    size: A4;
+    margin: 11mm 12mm 12mm;
+  }
+
   :root,
   body {
     background: #ffffff !important;
-    color: #111827 !important;
+    color: #131b3a !important;
   }
 
-  .site-header,
-  .page-indicator,
-  .hero-section__availability,
-  .hero-section__scroll,
-  .compact-stats,
-  .summary-section__illustration,
-  .experience-aside {
-    display: none !important;
-  }
-
-  .hero-section {
-    min-height: auto !important;
-    padding: 24px 0 12px !important;
-    background: #ffffff !important;
-    border: 0 !important;
-  }
-
-  .hero-section__content,
-  .page-content {
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .hero-section h1 {
-    font-size: 34px !important;
-  }
-
-  .hero-section__meta {
-    display: flex !important;
-  }
-
-  .hero-section__actions {
-    display: none !important;
-  }
-
-  .page-content {
-    gap: 14px !important;
-  }
-
-  .section-shell,
-  .experience-section,
-  .experience-card__content {
-    page-break-inside: avoid;
-    break-inside: avoid;
+  * {
     box-shadow: none !important;
-    border-color: #d1d5db !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
 
-  .achievement-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-
-  .experience-card {
-    grid-template-columns: 96px 1fr !important;
-  }
-
-  .experience-timeline::before {
+  .screen-resume {
     display: none !important;
+  }
+
+  .site-shell {
+    overflow: visible !important;
+  }
+
+  .print-resume {
+    display: block !important;
+    width: 100%;
+    margin: 0 !important;
+    color: #131b3a;
+    font-family:
+      Inter, "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system,
+      BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 9.2pt;
+    line-height: 1.42;
+  }
+
+  .print-resume h1,
+  .print-resume h2,
+  .print-resume h3,
+  .print-resume p,
+  .print-resume dl,
+  .print-resume dd,
+  .print-resume ul {
+    margin: 0;
+  }
+
+  .print-resume h1 {
+    font-size: 29pt;
+    font-weight: 700;
+    line-height: 0.96;
+    letter-spacing: 0;
+  }
+
+  .print-resume h2 {
+    display: flex;
+    align-items: center;
+    gap: 7mm;
+    margin-bottom: 4.5mm;
+    color: #131b3a;
+    font-size: 12pt;
+    font-weight: 800;
+    letter-spacing: 0;
+  }
+
+  .print-resume h2::after {
+    content: "";
+    width: 15mm;
+    height: 0.5pt;
+    background: #8e7dff;
+  }
+
+  .print-resume h3 {
+    color: #131b3a;
+    font-size: 10.2pt;
+    font-weight: 800;
+    line-height: 1.25;
+  }
+
+  .print-resume__header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 58mm;
+    gap: 9mm;
+    padding-bottom: 7mm;
+    border-bottom: 1pt solid #dfe2ee;
+    break-after: avoid;
+  }
+
+  .print-resume__header > div > p:last-child {
+    max-width: 126mm;
+    margin-top: 4mm;
+    color: #4b5576;
+    font-size: 9.6pt;
+  }
+
+  .print-resume__eyebrow {
+    margin-bottom: 2.5mm !important;
+    color: #6a63ff;
+    font-size: 8pt;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .print-resume__contact {
+    display: grid;
+    gap: 2.2mm;
+    align-content: start;
+    padding: 4mm;
+    background: #f7f7fa;
+    border: 1pt solid #e7e8f1;
+    border-radius: 5mm;
+  }
+
+  .print-resume__contact div {
+    break-inside: avoid;
+  }
+
+  .print-resume__contact dt {
+    color: #7b84a3;
+    font-size: 6.8pt;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .print-resume__contact dd {
+    margin-top: 0.5mm;
+    color: #131b3a;
+    font-size: 8.1pt;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+  }
+
+  .print-resume__section {
+    margin-top: 7mm;
+    break-inside: avoid;
+  }
+
+  .print-resume__overview {
+    display: grid;
+    grid-template-columns: 49mm minmax(0, 1fr);
+    gap: 8mm;
+    break-after: avoid;
+  }
+
+  .print-resume__stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2mm;
+  }
+
+  .print-resume__stats div {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 1.2mm;
+    min-height: 21mm;
+    padding: 2.4mm 3mm;
+    text-align: center;
+    background: #fbfbfe;
+    border: 1pt solid #e7e8f1;
+    border-radius: 4mm;
+    break-inside: avoid;
+  }
+
+  .print-resume__stats strong {
+    color: #6a63ff;
+    font-size: 14pt;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .print-resume__stats span {
+    color: #4b5576;
+    font-size: 7.8pt;
+    font-weight: 800;
+  }
+
+  .print-resume__achievements ul,
+  .print-resume__job ul {
+    display: grid;
+    gap: 2mm;
+    padding-left: 4mm;
+  }
+
+  .print-resume__achievements li,
+  .print-resume__job li {
+    color: #4b5576;
+    break-inside: avoid;
+  }
+
+  .print-resume__achievements li::marker,
+  .print-resume__job li::marker {
+    color: #6a63ff;
+  }
+
+  .print-resume__achievements strong,
+  .print-resume__job li strong {
+    color: #131b3a;
+    font-weight: 800;
+  }
+
+  .print-resume__achievements span {
+    display: block;
+    margin-top: 0.7mm;
+  }
+
+  .print-resume__experience {
+    break-inside: auto;
+  }
+
+  .print-resume__job {
+    padding: 4mm 0 4.2mm;
+    border-top: 1pt solid #e7e8f1;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .print-resume__job:first-of-type {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .print-resume__job header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 6mm;
+    align-items: start;
+    margin-bottom: 2.5mm;
+  }
+
+  .print-resume__job header p {
+    margin-top: 0.8mm;
+    color: #4b5576;
+    font-size: 8pt;
+    font-weight: 800;
+  }
+
+  .print-resume__job header span {
+    color: #6a63ff;
+    font-size: 8pt;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  .print-resume__job > p {
+    margin-bottom: 2.5mm;
+    color: #4b5576;
+  }
+
+  .print-resume__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5mm;
+    margin-top: 2.8mm;
+  }
+
+  .print-resume__tags span {
+    display: inline-flex;
+    padding: 0.9mm 2.4mm;
+    color: #4b5576;
+    font-size: 7pt;
+    font-weight: 800;
+    background: #fbfbfe;
+    border: 1pt solid #e7e8f1;
+    border-radius: 999px;
+  }
+
+  .print-resume__skills {
+    break-inside: avoid;
+  }
+
+  .print-resume__skill-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3mm 7mm;
+  }
+
+  .print-resume__skill-grid div {
+    break-inside: avoid;
+  }
+
+  .print-resume__skill-grid h3 {
+    color: #6a63ff;
+    font-size: 8.4pt;
+  }
+
+  .print-resume__skill-grid p {
+    margin-top: 1mm;
+    color: #4b5576;
   }
 }
