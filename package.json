@@ -8,6 +8,7 @@
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
+    "docs:check": "node scripts/check-docs.mjs",
     "lint": "eslint . --max-warnings=0",
     "type-check": "vue-tsc --build --force"
   },

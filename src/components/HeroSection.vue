@@ -8,7 +8,7 @@ import {
   mdiPhoneOutline
 } from '@mdi/js'
 import Icon from './Icon.vue'
-import heroImage from '../assets/hero-background.png'
+import heroImage from '../assets/hero-background.webp'
 import type { IntroductionData, StatItem } from '../types/cv'
 
 const props = defineProps<{

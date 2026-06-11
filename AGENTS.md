@@ -1,40 +1,41 @@
-# AGENTS.md
+# AGENTS
 
-This file provides guidance to Codex (Codex.ai/code) when working with code in this repository.
+## Purpose
+- Use this file as the quick navigation map for agents working in this repository.
+- Keep detailed architecture, product, design, and quality guidance in `docs/`.
+- Verify code-facing claims against the current source before changing docs.
+
+## Quick Navigation
+- Architecture: `ARCHITECTURE.md`
+- Product specs: `docs/product-specs/index.md`
+- Design docs: `docs/design-docs/index.md`
+- Frontend standards: `docs/FRONTEND.md`
+- Quality, reliability, and security:
+  - `docs/QUALITY_SCORE.md`
+  - `docs/RELIABILITY.md`
+  - `docs/SECURITY.md`
+- Planning and debt:
+  - `docs/PLANS.md`
+  - `docs/exec-plans/tech-debt-tracker.md`
+- Generated evidence: `docs/generated/`
+- Historical visual spec: `design/DESIGN.md`
 
 ## Commands
-
-### Development
 ```bash
-bun dev          # Start development server with hot reload
-bun preview      # Preview production build
+bun run dev          # Start development server with hot reload
+bun run preview      # Preview production build
+bun run docs:check   # Validate required docs and local markdown links
 ```
 
-### Build
 ```bash
-bun build        # Type-check and build for production
-bun build-only   # Build without type-checking
-bun type-check   # Run TypeScript type checking only
+bun run build        # Type-check and build for production
+bun run build-only   # Build without type-checking
+bun run type-check   # Run TypeScript type checking only
+bun run lint         # Run ESLint with zero warnings allowed
 ```
 
-## Architecture
-
-This is a Vue 3 + TypeScript CV/Resume application built with Vite. The project uses:
-
-- **Vue 3** with Composition API (`<script setup>`)
-- **TypeScript** for type safety
-- **CSS design tokens** for custom responsive styling
-- **Vite** as the build tool
-- **Bun** as the package manager
-
-### Key Structure
-
-- `src/App.vue` - Main application component that imports and displays Introduction and Experience components
-- `src/assets/data.json` - Contains all CV data (personal info, experience history)
-- `src/components/` - Vue components:
-  - `Introduction.vue` - Displays personal information
-  - `Experience.vue` - Displays work experience
-  - `ListItem.vue` - Reusable list component
-  - `Icon.vue` - Icon wrapper component
-
-The application follows a data-driven approach where CV content is stored in `data.json` and passed to components as props.
+## Working Rules
+- Treat `src/assets/data.json` as the source of truth for CV content and contact details.
+- Preserve exact user-provided contact fields. Do not normalize phone numbers, emails, or names unless explicitly asked.
+- Keep `AGENTS.md` concise. Add detailed guidance to `docs/` and link to it here.
+- Do not stage unrelated local changes; this repository often has concurrent draft artifacts.

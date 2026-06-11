@@ -13,12 +13,12 @@ This is my personal CV/Resume built as a modern web application using Vue 3, Vit
 - **Firebase Hosting** - Deployment and hosting
 
 ## Features
-- 🎨 Premium portfolio design with a responsive image-led hero
-- 📱 Fully responsive layout for all devices
-- 🖨️ Print-optimized styles for PDF generation
-- ⚡ Lightning-fast performance with Vite
-- 🔍 SEO-friendly static site generation
-- 🚀 Automated deployment via GitHub Actions
+- Premium portfolio design with a responsive WebP image-led hero
+- Fully responsive layout for all devices
+- Print-optimized resume surface for PDF generation
+- Fast static build with Vite
+- Clickable contact and social links
+- Automated Firebase Hosting deployment through GitHub Actions
 
 ## Development
 
@@ -32,34 +32,52 @@ bun install
 
 ### Start development server
 ```bash
-bun dev
+bun run dev
 ```
 
 ### Build for production
 ```bash
-bun build
+bun run build
 ```
 
 ### Preview production build
 ```bash
-bun preview
+bun run preview
+```
+
+### Validate documentation
+```bash
+bun run docs:check
 ```
 
 ## Project Structure
 ```
+docs/                # Canonical codebase knowledge store
+design/              # Historical visual reference spec and reference images
 src/
 ├── assets/          # Styles, images, and data
 │   ├── base.css    # Design tokens, layout styles, responsive and print styles
 │   ├── data.json   # CV content data
+│   ├── hero-background.webp
 │   └── jcloete.jpg # Profile image
 ├── components/      # Vue components
-│   ├── Introduction.vue
+│   ├── HeroSection.vue
+│   ├── SiteHeader.vue
+│   ├── CompactStatsRow.vue
 │   ├── KeyAchievements.vue
 │   ├── ProfessionalSummary.vue
 │   ├── Experience.vue
+│   ├── PrintResume.vue
 │   └── Skills.vue
 └── App.vue         # Main application component
 ```
+
+## Documentation
+Start with `AGENTS.md`, then use:
+- `ARCHITECTURE.md` for system structure.
+- `docs/product-specs/index.md` for behavior.
+- `docs/design-docs/index.md` for visual design rationale.
+- `docs/QUALITY_SCORE.md`, `docs/RELIABILITY.md`, and `docs/SECURITY.md` for standards and risks.
 
 ## Deployment
 The project automatically deploys to Firebase Hosting via GitHub Actions on:
@@ -72,5 +90,4 @@ The project automatically deploys to Firebase Hosting via GitHub Actions on:
 - **Always up-to-date** - Changes are instantly available to everyone
 - **Print to any format** - Use Ctrl+P to save as PDF or print
 - **Interactive elements** - Clickable links and smooth animations
-- **Analytics** - Track views and engagement
 - **Environmentally friendly** - No paper waste

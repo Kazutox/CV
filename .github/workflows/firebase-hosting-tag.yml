@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: oven-sh/setup-bun@v2
-      - run: bun install && bun run build-only
+      - run: bun install && bun run docs:check && bun run build-only
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
