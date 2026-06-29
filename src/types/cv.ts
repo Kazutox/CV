@@ -15,6 +15,7 @@ export interface IntroductionData {
     email: string
     phone: string
     linkedin: ContactLink
+    github: ContactLink
     website: ContactLink
   }
 }

@@ -37,6 +37,10 @@ const featuredExperience = props.data.experience.map((item) => ({
           <dt>LinkedIn</dt>
           <dd>{{ data.introduction.contact.linkedin.display }}</dd>
         </div>
+        <div>
+          <dt>GitHub</dt>
+          <dd>{{ data.introduction.contact.github.display }}</dd>
+        </div>
       </dl>
     </header>
 

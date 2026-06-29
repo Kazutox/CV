@@ -3,6 +3,7 @@ import { onBeforeUnmount, onMounted, ref } from 'vue'
 import {
   mdiArrowTopRight,
   mdiEmailOutline,
+  mdiGithub,
   mdiLinkedin,
   mdiMapMarkerOutline,
   mdiPhoneOutline
@@ -23,6 +24,7 @@ const heroStyle = {
 const telHref = `tel:${props.introduction.contact.phone.replace(/\s/g, '')}`
 const emailHref = `mailto:${props.introduction.contact.email}`
 const linkedinHref = `https://${props.introduction.contact.linkedin.url}`
+const githubHref = props.introduction.contact.github.url
 const isAtPageTop = ref(true)
 
 function updatePageTopState() {
@@ -71,6 +73,15 @@ onBeforeUnmount(() => {
         >
           <Icon :icon="mdiLinkedin" :size="16" />
           {{ introduction.contact.linkedin.display }}
+        </a>
+        <a
+          :href="githubHref"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Jc Cloete on GitHub"
+        >
+          <Icon :icon="mdiGithub" :size="16" />
+          {{ introduction.contact.github.display }}
         </a>
       </div>
 
